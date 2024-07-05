@@ -1,3 +1,6 @@
 @import "variables";
-@import "globals";
+//for some reason putting import mixins 
+//in second order here seems to make nav bar work
+@import "mixins";
 @import "header";
+@import "globals";
