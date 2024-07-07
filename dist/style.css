@@ -10,9 +10,20 @@
   width: 26px;
   height: 2px;
   background-color: hsl(233, 26%, 24%);
+  transition: all 300ms ease-in-out;
+  transform-origin: left center;
 }
 .header__menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+.header__menu.open > span:first-child {
+  transform: rotate(45deg);
+}
+.header__menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+.header__menu.open > span:last-child {
+  transform: rotate(-45deg);
 }
 .header__links a {
   position: relative;
@@ -71,6 +82,7 @@ body {
 
 a, a:visited, a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .flex {
