@@ -1,3 +1,38 @@
+@keyframes fade-in {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opcaity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+.header.open .overlay {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+.header.open .header__menu > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__menu > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .overlay {
+  display: none;
+  position: fixed;
+  top: 3.75rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
+}
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -15,15 +50,6 @@
 }
 .header__menu > span:not(:last-child) {
   margin-bottom: 5px;
-}
-.header__menu.open > span:first-child {
-  transform: rotate(45deg);
-}
-.header__menu.open > span:nth-child(2) {
-  opacity: 0;
-}
-.header__menu.open > span:last-child {
-  transform: rotate(-45deg);
 }
 .header__links a {
   position: relative;
