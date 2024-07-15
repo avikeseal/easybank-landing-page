@@ -3,9 +3,10 @@
     // hambuger open styles:
     &.open {
 
-        .overlay {
-            animation: fade-in 300ms ease-in-out forwards;
-        }
+        /*.overlay {
+            display: block;
+
+        }*/
 
         .header__menu{
             >span:first-child {
@@ -24,13 +25,22 @@
     }
 
     .overlay {
-        display: none;
+        //display: none;
+        opacity: 0;
         position: fixed;
         top: 3.75rem;
         right: 0px;
         bottom: 0px;
         left: 0px;
         background-image: linear-gradient($darkBlue, transparent);
+
+        &.fade-in {
+            display: block;
+        }
+
+        &.fade-out {
+            display: block;
+        }
     }
 
     nav {
