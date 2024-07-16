@@ -1,19 +1,43 @@
 @keyframes fade-in {
   from {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
   1% {
-    display: block;
-    opcaity: 0;
+    visibility: visible;
+    opacity: 0;
   }
   to {
-    display: block;
     opacity: 1;
   }
 }
-.header.open .overlay {
+.fade-in {
   animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
+
+.header.open {
+  /*.overlay {
+      display: block;
+
+  }*/
 }
 .header.open .header__menu > span:first-child {
   transform: rotate(45deg);
@@ -25,13 +49,19 @@
   transform: rotate(-45deg);
 }
 .header .overlay {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 3.75rem;
   right: 0px;
   bottom: 0px;
   left: 0px;
   background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
+}
+.header .overlay.fade-in {
+  display: block;
+}
+.header .overlay.fade-out {
+  display: block;
 }
 .header nav {
   padding: 1.0625rem 1.5rem;
