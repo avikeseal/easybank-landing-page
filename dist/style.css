@@ -83,9 +83,14 @@
   margin-bottom: 5px;
 }
 .header__menu {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
   background: hsl(0, 0%, 100%);
-  margin: 0px 1.5rem;
+  margin-top: 1.5rem;
   padding: 1.625rem;
+  border-radius: 5px;
 }
 .header__menu a {
   display: block;
