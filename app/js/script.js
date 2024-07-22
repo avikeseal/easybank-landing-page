@@ -8,6 +8,10 @@ btnHamburger.addEventListener('click', function(){
 
     if(header.classList.contains('open')) { //close hamburger menu
         header.classList.remove('open');
+        fadeElems.forEach(function(element) {
+            element.classList.remove("fade-in");
+            element.classList.add("fade-out");
+        });
         overlay.classList.remove("fade-in");
         overlay.classList.add("fade-out");
     }

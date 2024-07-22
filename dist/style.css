@@ -17,7 +17,7 @@
   }
 }
 .fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
+  animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -35,7 +35,7 @@
   }
 }
 .fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
 }
 
 .header.open {
@@ -56,7 +56,7 @@
 .header .overlay {
   opacity: 0;
   position: fixed;
-  top: 3.75rem;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -69,6 +69,8 @@
   display: block;
 }
 .header nav {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
 }
