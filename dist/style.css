@@ -38,6 +38,25 @@
   animation: fade-out 200ms ease-in-out forwards;
 }
 
+.hero__image {
+  border: 1px solid magenta;
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+.hero__image::before {
+  content: "";
+  background-image: url("/images/image-mockups.png");
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .header.open {
   /*.overlay {
       display: block;

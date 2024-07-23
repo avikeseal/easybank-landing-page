@@ -2,6 +2,7 @@
 @import "animations";
 //for some reason putting import mixins 
 //in second order here seems to make nav bar work
+@import "hero"; 
 @import "mixins";
 @import "header";
 @import "globals";
