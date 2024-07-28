@@ -38,14 +38,28 @@
   animation: fade-out 200ms ease-in-out forwards;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
-  border: 1px solid magenta;
   background-image: url("/images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 1;
+    order: 2;
+    height: 41rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
 }
 .hero__image::before {
   content: "";
@@ -60,14 +74,20 @@
 .hero__text {
   text-align: center;
 }
-.hero__text h1 {
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 1;
+    order: 1;
+  }
+}
+.hero h1 {
   font-weight: 300;
   color: hsl(233, 26%, 24%);
   line-height: 1.15;
   font-size: 2.31rem;
   margin-bottom: 1.5rem;
 }
-.hero__text p {
+.hero p {
   line-height: 1.5;
   margin-bottom: 2.25rem;
 }

@@ -1,19 +1,34 @@
 .hero {
+    @include breakpoint-up(large){
+        display: flex;
+        align-items: center;
+    }
+    
+   
 
     &__image {
         position: relative;
-        border: 1px solid magenta;
-        
         background-image: url('/images/bg-intro-mobile.svg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 17.5rem;
 
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 2;
+            height: 41rem;
+            background-image: url('/images/bg-intro-desktop.svg');
+            background-position: left center;
+        }
+        
+
+        
+        
         //pseudo-element
         &::before {
             content: "";
-            position:absolute;
+            position: absolute;
             background-image: url('/images/image-mockups.png');
             width: 100%;
             height: 100%;
@@ -25,6 +40,12 @@
 
     &__text {
         text-align: center;
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
+        }
+        
+    }
         
         h1 {
             font-weight: 300;
@@ -38,6 +59,5 @@
         p {
             line-height: 1.5;
             margin-bottom: 2.25rem;
-        }
-    }
+        }        
 }
