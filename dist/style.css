@@ -63,6 +63,9 @@
     background-image: none;
   }
 }
+.hero__image::before, .hero__image::after {
+  border: 1px solid magenta;
+}
 .hero__image::before {
   content: "";
   position: absolute;
@@ -72,6 +75,11 @@
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+@media (min-width: 64em) {
+  .hero__image::before {
+    width: 150%;
+  }
 }
 .hero__image::after {
   content: "";
