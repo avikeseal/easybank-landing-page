@@ -38,8 +38,11 @@
   animation: fade-out 200ms ease-in-out forwards;
 }
 
+.hero {
+  background-color: hsl(0, 0%, 98%);
+}
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: flex;
     align-items: center;
   }
@@ -57,11 +60,20 @@
     flex: 3;
     order: 2;
     height: 41rem;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center;
+    background-image: none;
   }
 }
 .hero__image::before {
+  content: "";
+  position: absolute;
+  background-image: url("/images/bg-intro-desktop.svg");
+  width: 100%;
+  height: 100%;
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.hero__image::after {
   content: "";
   position: absolute;
   background-image: url("/images/image-mockups.png");
