@@ -337,4 +337,15 @@ button:hover, .button:hover {
   .hide-for-desktop {
     display: none;
   }
+}
+
+@media (min-width: 64em) {
+  .feature__grid {
+    display: flex;
+  }
+}
+@media (min-width: 64em) {
+  .feature__item {
+    flex: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
