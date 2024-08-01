@@ -1,0 +1,34 @@
+.feature  {
+   //block element modifier (BEM) approach to
+   //writing sass styles
+   
+   
+   &__grid {
+    //we are only using flexbox for desktop
+    //since for mobile there is only column
+
+    @include breakpoint-up(large) {
+        display: flex;
+    }
+   }
+
+   &__item {
+    @include breakpoint-up(large) {
+        flex: 1;
+    }
+   }
+
+   &__icon {
+
+   }
+
+   &__title {
+
+   }
+
+   &__description {
+
+   }
+
+
+}
