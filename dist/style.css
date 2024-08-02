@@ -292,27 +292,49 @@ a, a:visited, a:hover {
   margin: 0 auto;
 }
 .container--pall {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
   padding-right: 1.5rem;
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
 }
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
 .container--py {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
   padding-bottom: 2.25rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 .container--px {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
 }
 .container--pr {
   padding-right: 1.5rem;
 }
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 .container--pl {
   padding-left: 1.5rem;
@@ -360,10 +382,21 @@ button:hover, .button:hover {
   }
 }
 
+.feature {
+  background-color: hsl(220, 16%, 96%);
+  text-align: center;
+}
+@media (min-width: 40rem) {
+  .feature {
+    text-align: left;
+  }
+}
+.feature__intro {
+  margin-bottom: 3.75rem;
+}
 @media (min-width: 64em) {
   .feature__intro {
     width: 60%;
-    margin-bottom: 3.75rem;
   }
 }
 @media (min-width: 40rem) {
@@ -374,7 +407,6 @@ button:hover, .button:hover {
 }
 .feature__item {
   padding: 0.9375rem;
-  border: 1px solid magenta;
 }
 @media (min-width: 40rem) {
   .feature__item {
@@ -399,11 +431,15 @@ button:hover, .button:hover {
   font-weight: 300;
   line-height: 1.15;
   color: hsl(233, 26%, 24%);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 64em) {
   .feature__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2.125rem;
   }
+}
+.feature__description {
+  font-size: 1rem;
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

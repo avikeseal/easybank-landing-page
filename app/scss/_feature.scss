@@ -1,11 +1,20 @@
 .feature  {
+    background-color: $lightGrayishBlue;
+    text-align: center;
    //block element modifier (BEM) approach to
    //writing sass styles
 
+   @include breakpoint-up(medium) {
+    text-align: left;
+   }
+
    &__intro {
+    
+    margin-bottom: 3.75rem;
+
     @include breakpoint-up(large) {
         width: 60%;
-        margin-bottom: 3.75rem;
+        
     }
    }
    
@@ -23,7 +32,7 @@
 
    &__item {
     padding: 0.9375rem;
-    border: 1px solid magenta;
+    
 
     //for tablet: 
     //three different flex properties in use here:
@@ -54,10 +63,10 @@
     font-weight: 300;
     line-height: 1.15;
     color: $darkBlue;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @include breakpoint-up(large) {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 2.125rem;
     }
 
@@ -65,6 +74,8 @@
 
 
    &__description {
+    font-size: 1rem;
+    line-height: 1.5;
    }
 
 
