@@ -339,9 +339,19 @@ button:hover, .button:hover {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40rem) {
   .feature__grid {
     display: flex;
+    flex-wrap: wrap;
+  }
+}
+.feature__item {
+  padding: 0.9375rem;
+  border: 1px solid magenta;
+}
+@media (min-width: 40rem) {
+  .feature__item {
+    flex: 0 0 50%;
   }
 }
 @media (min-width: 64em) {

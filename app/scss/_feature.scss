@@ -7,12 +7,26 @@
     //we are only using flexbox for desktop
     //since for mobile there is only column
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
         display: flex;
+        flex-wrap: wrap;
     }
+
    }
 
    &__item {
+    padding: 0.9375rem;
+    border: 1px solid magenta;
+
+    //for tablet: 
+    //three different flex properties in use here:
+    //flex grow flex shrink and flex basis
+    //if you want all the items to have same width
+    //and be on the same row then flex: 1
+    @include  breakpoint-up(medium) {
+        flex: 0 0 50%;
+    }
+
     @include breakpoint-up(large) {
         flex: 1;
     }
