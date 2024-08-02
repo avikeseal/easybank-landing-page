@@ -115,10 +115,6 @@
     text-align: left;
   }
 }
-.hero__text p {
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-}
 
 .header.open {
   /*.overlay {
@@ -251,6 +247,9 @@ body.noscroll {
 }
 
 h1, h2, h3 {
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+  line-height: 1.15;
   margin-top: 0px;
 }
 
@@ -276,6 +275,11 @@ h2 {
     font-size: 2.25rem;
     margin-bottom: 2.25rem;
   }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
 }
 
 a, a:visited, a:hover {
