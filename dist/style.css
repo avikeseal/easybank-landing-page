@@ -393,4 +393,17 @@ button:hover, .button:hover {
   .feature__icon {
     margin-bottom: 2.75rem;
   }
+}
+.feature__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: hsl(233, 26%, 24%);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 2.125rem;
+  }
 }/*# sourceMappingURL=style.css.map */
