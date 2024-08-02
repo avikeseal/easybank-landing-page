@@ -236,6 +236,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.3;
   color: hsl(233, 8%, 62%);
+  min-height: 200vh;
 }
 @media (min-width: 64em) {
   body {
@@ -383,5 +384,13 @@ button:hover, .button:hover {
 @media (min-width: 64em) {
   .feature__item {
     flex: 1;
+  }
+}
+.feature__icon {
+  margin-bottom: 1.875rem;
+}
+@media (min-width: 64em) {
+  .feature__icon {
+    margin-bottom: 2.75rem;
   }
 }/*# sourceMappingURL=style.css.map */
