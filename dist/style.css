@@ -359,6 +359,12 @@ button:hover, .button:hover {
   }
 }
 
+@media (min-width: 64em) {
+  .feature__intro {
+    width: 60%;
+    margin-bottom: 3.75rem;
+  }
+}
 @media (min-width: 40rem) {
   .feature__grid {
     display: flex;

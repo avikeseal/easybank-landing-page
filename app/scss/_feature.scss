@@ -1,6 +1,13 @@
 .feature  {
    //block element modifier (BEM) approach to
    //writing sass styles
+
+   &__intro {
+    @include breakpoint-up(large) {
+        width: 60%;
+        margin-bottom: 3.75rem;
+    }
+   }
    
    
    &__grid {
