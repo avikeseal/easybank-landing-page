@@ -442,4 +442,23 @@ button:hover, .button:hover {
 .feature__description {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.articles {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.article__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40rem) {
+  .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .article__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
