@@ -17,7 +17,11 @@
         //since mobile display is just one column: 
         //1fr is the auto-width
         grid-template-columns: 1fr;
+        gap: 1.875rem;
 
+        
+
+        //using media queries to change number of columns: 
         //for tablet: 
         @include breakpoint-up(medium) {
             //layout with two columns with similar width: 
@@ -30,29 +34,43 @@
         }
     }
 
-    //&__item {
+    &__item {
+        border-radius: 0.3125rem;
+        //for rounded corners: 
+        overflow: hidden;
+    }
 
-    //}
+    &__image {
+        height: 12.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-    //&__image {
+    &__text {
+        background-color: $white;
+        //we're going to start with mobile padding first:
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem; 
+        color: $grayishBlue;
 
-    //}
 
-    //&__text {
+        @include breakpoint-up(medium) {
+            padding: 1.875rem 1.5625rem;
+        }
+    }
 
-    //}
+    &__author {
+        font-size: 0.625rem;
+    }
 
-    //&__author {
+    &__title {
+        font-size: 1.0625rem;
+        color: $darkBlue;
+    }
 
-    //}
-
-    //&__title {
-
-    //}
-
-   // &__description {
-
-    //}
+   &__description {
+        font-size: 0.8125rem;
+    }
 
 
 }
