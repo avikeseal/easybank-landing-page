@@ -1,0 +1,53 @@
+.articles {
+    background-color: $veryLightGrey;
+}
+
+.article {
+    
+    &__content {
+
+    }
+
+    &__grid {
+        //unlike flexbox if you write display: grid just by 
+        //itself with no other styles, nothing is going to
+        //visibly happen because for grid we need to start
+        //building a template besides writing display: grid
+        display: grid;
+        //since mobile display is just one column: 
+        //1fr is the auto-width
+        grid-template-columns: 1fr;
+
+        //for desktop: 
+        @include breakpoint-up(medium) {
+            //layout with two columns with similar width: 
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+
+    }
+
+    &__image {
+
+    }
+
+    &__text {
+
+    }
+
+    &__author {
+
+    }
+
+    &__title {
+
+    }
+
+    &__description {
+
+    }
+
+
+}
