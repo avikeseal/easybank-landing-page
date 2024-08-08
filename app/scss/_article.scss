@@ -18,10 +18,15 @@
         //1fr is the auto-width
         grid-template-columns: 1fr;
 
-        //for desktop: 
+        //for tablet: 
         @include breakpoint-up(medium) {
             //layout with two columns with similar width: 
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        //for desktop:
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
