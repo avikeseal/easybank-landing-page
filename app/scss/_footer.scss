@@ -14,7 +14,7 @@
         //for grid-template-areas you write out the names of
         //each of the areas where you want that block to be in the grid:
         grid-template-areas: "logo links1 links2 cta"
-        "social links1 links2 cta";
+        "social links1 links2 copyright";
         justify-items: start;
     }
 
@@ -24,7 +24,11 @@
 
     &__logo {
         display: inline-block;
-        margin-bottom: 1.875rem;
+        //margin-bottom: 1.875rem;
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+        }
 
         @include breakpoint-up(large) {
             //grid-area property of logo will tell the browser
@@ -35,10 +39,14 @@
     }
 
     &__social {
-        margin-bottom: 1.875rem;
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+        }
 
         @include breakpoint-up(large) {
             grid-area: social;
+            align-self: end;
         }
 
         //display-inline for all menu items:
@@ -67,7 +75,10 @@
         }
 
         &.col2 {
-            margin-bottom: 1.875rem;
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+            }
+            //margin-bottom: 1.875rem;
 
             @include breakpoint-up(large) {
                 grid-area: links2;
@@ -84,11 +95,20 @@
         }
 
         a.button{
-            margin-bottom: 1.875rem;
+
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+            }
+            //margin-bottom: 1.875rem;
         }
     }
 
-    //&__copyright {
-
-    //}
+    &__copyright {
+        
+        @include breakpoint-up(large) {
+            grid-area: copyright;
+            align-self: end;
+            justify-self: end;
+        } 
+    }
 }
