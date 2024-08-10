@@ -513,7 +513,7 @@ button:hover, .button:hover {
   .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 2fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
     grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
     justify-items: start;
   }
@@ -547,6 +547,7 @@ button:hover, .button:hover {
 }
 .footer__social a {
   display: inline-block;
+  height: 1.25rem;
 }
 .footer__social a:not(:last-child) {
   display: inline-block;
@@ -557,6 +558,7 @@ button:hover, .button:hover {
   flex-direction: column;
   align-items: center;
   line-height: 2.25;
+  font-size: 0.9375rem;
 }
 @media (min-width: 64em) {
   .footer__links.col1 {
@@ -590,5 +592,6 @@ button:hover, .button:hover {
     grid-area: copyright;
     align-self: end;
     justify-self: end;
+    font-size: 0.9375rem;
   }
 }/*# sourceMappingURL=style.css.map */

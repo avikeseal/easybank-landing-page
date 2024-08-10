@@ -9,7 +9,7 @@
         //first three columns are 1fr each:
         //for last column - 2fr:
         grid-template-columns: repeat(3, 1fr) 2fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 1fr auto; //repeat(2, 1fr);
 
         //for grid-template-areas you write out the names of
         //each of the areas where you want that block to be in the grid:
@@ -52,6 +52,7 @@
         //display-inline for all menu items:
         a {
             display: inline-block;
+            height: 1.25rem;
         }
 
         a:not(:last-child) {
@@ -66,6 +67,13 @@
         flex-direction: column;
         align-items: center;
         line-height: 2.25;
+        font-size: 0.9375rem;
+        
+        //@include breakpoint-up(large) {
+            //justify-content: space-between;
+            //align-items: start;
+            
+        //}
 
     
         &.col1 {
@@ -109,6 +117,7 @@
             grid-area: copyright;
             align-self: end;
             justify-self: end;
+            font-size: 0.9375rem;
         } 
     }
 }
