@@ -132,6 +132,7 @@
   transform: rotate(-45deg);
 }
 .header .overlay {
+  z-index: 1;
   opacity: 0;
   position: fixed;
   top: 0px;
@@ -147,6 +148,7 @@
   display: block;
 }
 .header nav {
+  z-index: 2;
   position: relative;
   background-color: hsl(0, 0%, 100%);
   padding-top: 1.0625rem;
@@ -168,6 +170,7 @@
   margin-bottom: 5px;
 }
 .header__menu {
+  z-index: 1;
   position: absolute;
   width: calc(100% - 3rem);
   left: 50%;
