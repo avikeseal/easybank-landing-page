@@ -518,6 +518,7 @@ button:hover, .button:hover {
     grid-template-columns: repeat(3, 1fr) 2fr;
     grid-template-rows: 1fr auto;
     grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    gap: 1rem;
     justify-items: start;
   }
 }
@@ -551,6 +552,12 @@ button:hover, .button:hover {
 .footer__social a {
   display: inline-block;
   height: 1.25rem;
+}
+.footer__social a svg path {
+  transition: fil 150ms ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: hsl(136, 65%, 51%);
 }
 .footer__social a:not(:last-child) {
   display: inline-block;

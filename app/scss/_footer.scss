@@ -17,6 +17,7 @@
             //each of the areas where you want that block to be in the grid:
             grid-template-areas: "logo links1 links2 cta"
             "social links1 links2 copyright";
+            gap: 1rem;
             justify-items: start;
         }
 
@@ -57,6 +58,14 @@
         a {
             display: inline-block;
             height: 1.25rem;
+
+            svg path {
+                transition: fil 150ms ease-in-out;
+            }
+
+            &:hover svg path {
+                fill: $limeGreen;
+            }
         }
 
         a:not(:last-child) {
