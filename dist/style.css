@@ -510,7 +510,7 @@ button:hover, .button:hover {
   text-align: center;
 }
 @media (min-width: 64em) {
-  .footer {
+  .footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 2fr;
     grid-template-rows: 1fr auto;
@@ -587,11 +587,14 @@ button:hover, .button:hover {
     margin-bottom: 1.875rem;
   }
 }
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: hsl(233, 8%, 62%);
+}
 @media (min-width: 64em) {
   .footer__copyright {
     grid-area: copyright;
     align-self: end;
     justify-self: end;
-    font-size: 0.9375rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -4,18 +4,22 @@
     padding: 2.5rem;
     text-align: center;
 
-    @include  breakpoint-up(large) {
-        display: grid;
-        //first three columns are 1fr each:
-        //for last column - 2fr:
-        grid-template-columns: repeat(3, 1fr) 2fr;
-        grid-template-rows: 1fr auto; //repeat(2, 1fr);
+    .container {
+        
+        @include  breakpoint-up(large) {
+            display: grid;
+            //first three columns are 1fr each:
+            //for last column - 2fr:
+            grid-template-columns: repeat(3, 1fr) 2fr;
+            grid-template-rows: 1fr auto; //repeat(2, 1fr);
 
-        //for grid-template-areas you write out the names of
-        //each of the areas where you want that block to be in the grid:
-        grid-template-areas: "logo links1 links2 cta"
-        "social links1 links2 copyright";
-        justify-items: start;
+            //for grid-template-areas you write out the names of
+            //each of the areas where you want that block to be in the grid:
+            grid-template-areas: "logo links1 links2 cta"
+            "social links1 links2 copyright";
+            justify-items: start;
+        }
+
     }
 
     a {
@@ -112,12 +116,14 @@
     }
 
     &__copyright {
+        font-size: 0.8125rem;
+        color: $grayishBlue;
         
         @include breakpoint-up(large) {
             grid-area: copyright;
             align-self: end;
             justify-self: end;
-            font-size: 0.9375rem;
+            //font-size: 0.9375rem;
         } 
     }
 }
