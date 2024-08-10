@@ -88,6 +88,14 @@
             
         //}
 
+        a {
+            transition: color 150ms ease-in-out;
+
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+
     
         &.col1 {
             @include breakpoint-up(large) {
